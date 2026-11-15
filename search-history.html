@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search History</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #202124;
+}
+
+/* Top navigation */
+.top-bar {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.logo span:nth-child(1) { color: #4285F4; }
+.logo span:nth-child(2) { color: #EA4335; }
+.logo span:nth-child(3) { color: #FBBC05; }
+.logo span:nth-child(4) { color: #4285F4; }
+.logo span:nth-child(5) { color: #34A853; }
+.logo span:nth-child(6) { color: #EA4335; }
+
+.profile {
+    background: #5f6368;
+    color: white;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/* Main layout */
+.container {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #5f6368;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Search bar */
+.search-bar {
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 28px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    background: transparent;
+}
+
+/* History */
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.day {
+    font-size: 14px;
+    color: #5f6368;
+    margin: 28px 0 12px;
+}
+
+.history-card {
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eeeeee;
+    gap: 16px;
+}
+
+.entry:last-child {
+    border-bottom: none;
+}
+
+.search-icon {
+    color: #5f6368;
+    font-size: 19px;
+}
+
+.entry-content {
+    flex: 1;
+}
+
+.query {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.time {
+    font-size: 12px;
+    color: #70757a;
+}
+
+.dots {
+    color: #5f6368;
+    font-size: 20px;
+}
+
+.footer {
+    text-align: center;
+    color: #80868b;
+    font-size: 12px;
+    margin-top: 45px;
+    line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 0 18px;
+    }
+
+    .container {
+        margin-top: 30px;
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .entry {
+        padding: 16px 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="logo">
+        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+    </div>
+    <div class="profile">F</div>
+</div>
+
+<div class="container">
+
+    <h1>Search history</h1>
+
+    <div class="subtitle">
+        Your recent searches and activity
+    </div>
+
+    <div class="search-bar">
+        <span>⌕</span>
+        <input type="text" placeholder="Search your activity" disabled>
+    </div>
+
+    <div class="section-title">Recent activity</div>
+
+    <!-- DAY 1 -->
+    <div class="day">November 14, 2026</div>
+
+    <div class="history-card">
+
+        <div class="entry">
+            <div class="search-icon">⌕</div>
+            <div class="entry-content">
+                <div class="query">Malathion poisoning symptoms</div>
+                <div class="time">11:42 PM</div>
+            </div>
+            <div class="dots">⋮</div>
+        </div>
+
+        <div class="entry">
+            <div class="search-icon">⌕</div>
+            <div class="entry-content">
+                <div class="query">Organophosphate poisoning forensic investigation</div>
+                <div class="time">11:49 PM</div>
+            </div>
+            <div class="dots">⋮</div>
+        </div>
+
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day">November 15, 2026</div>
+
+    <div class="history-card">
+
+        <div class="entry">
+            <div class="search-icon">⌕</div>
+            <div class="entry-content">
+                <div class="query">Malathion safety data sheet</div>
+                <div class="time">7:18 AM</div>
+            </div>
+            <div class="dots">⋮</div>
+        </div>
+
+        <div class="entry">
+            <div class="search-icon">⌕</div>
+            <div class="entry-content">
+                <div class="query">What to do after accidental pesticide exposure</div>
+                <div class="time">7:24 AM</div>
+            </div>
+            <div class="dots">⋮</div>
+        </div>
+
+        <div class="entry">
+            <div class="search-icon">⌕</div>
+            <div class="entry-content">
+                <div class="query">Can pesticide residue contaminate kitchen surfaces?</div>
+                <div class="time">7:31 AM</div>
+            </div>
+            <div class="dots">⋮</div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        This is a simulated browser activity record.<br>
+        Search activity is displayed for investigative purposes.
+    </div>
+
+</div>
+
+</body>
+</html>

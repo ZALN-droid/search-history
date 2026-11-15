@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search History</title>
+<title>Google Search History</title>
 
 <style>
 * {
@@ -13,131 +13,112 @@
 
 body {
     margin: 0;
-    background: #f8f9fa;
-    font-family: Arial, sans-serif;
+    background: #f1f3f4;
+    font-family: Arial, Helvetica, sans-serif;
     color: #202124;
 }
 
-/* Top navigation */
-.top-bar {
-    height: 65px;
+.header {
     background: white;
+    padding: 18px 40px;
     border-bottom: 1px solid #dadce0;
     display: flex;
-    align-items: center;
-    padding: 0 35px;
     justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-    font-size: 25px;
+.google {
+    font-size: 28px;
     font-weight: bold;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
 }
 
-.logo span:nth-child(1) { color: #4285F4; }
-.logo span:nth-child(2) { color: #EA4335; }
-.logo span:nth-child(3) { color: #FBBC05; }
-.logo span:nth-child(4) { color: #4285F4; }
-.logo span:nth-child(5) { color: #34A853; }
-.logo span:nth-child(6) { color: #EA4335; }
+.google span:nth-child(1) {color:#4285F4;}
+.google span:nth-child(2) {color:#EA4335;}
+.google span:nth-child(3) {color:#FBBC05;}
+.google span:nth-child(4) {color:#4285F4;}
+.google span:nth-child(5) {color:#34A853;}
+.google span:nth-child(6) {color:#EA4335;}
 
-.profile {
+.avatar {
     background: #5f6368;
     color: white;
     border-radius: 50%;
-    width: 34px;
-    height: 34px;
+    width: 35px;
+    height: 35px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 15px;
+    align-items: center;
 }
 
-/* Main layout */
-.container {
-    max-width: 900px;
+.main {
+    max-width: 850px;
     margin: 45px auto;
-    padding: 0 25px;
+    padding: 0 20px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 400;
-    margin-bottom: 8px;
 }
 
-.subtitle {
+.description {
     color: #5f6368;
     font-size: 14px;
     margin-bottom: 30px;
 }
 
-/* Search bar */
-.search-bar {
+.search {
     background: white;
-    border: 1px solid #dadce0;
-    border-radius: 28px;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    border-radius: 30px;
+    padding: 16px 22px;
     margin-bottom: 35px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #dadce0;
+    color: #777;
 }
 
-.search-bar input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 15px;
-    background: transparent;
-}
-
-/* History */
-.section-title {
+h2 {
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 15px;
 }
 
-.day {
-    font-size: 14px;
+.date {
     color: #5f6368;
-    margin: 28px 0 12px;
+    font-size: 14px;
+    margin: 25px 0 12px;
 }
 
-.history-card {
+.history {
     background: white;
+    border-radius: 10px;
     border: 1px solid #dadce0;
-    border-radius: 12px;
     overflow: hidden;
 }
 
-.entry {
+.item {
     display: flex;
     align-items: center;
-    padding: 18px 20px;
+    padding: 19px 22px;
     border-bottom: 1px solid #eeeeee;
-    gap: 16px;
 }
 
-.entry:last-child {
+.item:last-child {
     border-bottom: none;
 }
 
-.search-icon {
-    color: #5f6368;
-    font-size: 19px;
+.icon {
+    font-size: 21px;
+    color: #70757a;
+    margin-right: 20px;
 }
 
-.entry-content {
+.details {
     flex: 1;
 }
 
 .query {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .time {
@@ -145,36 +126,25 @@ h1 {
     color: #70757a;
 }
 
-.dots {
-    color: #5f6368;
-    font-size: 20px;
+.more {
+    color: #70757a;
+    font-size: 22px;
 }
 
 .footer {
     text-align: center;
-    color: #80868b;
     font-size: 12px;
-    margin-top: 45px;
-    line-height: 1.8;
+    color: #80868b;
+    margin: 40px 0;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .top-bar {
-        padding: 0 18px;
+@media(max-width:600px) {
+    .header {
+        padding: 15px 20px;
     }
 
-    .container {
-        margin-top: 30px;
-        padding: 0 16px;
-    }
-
-    h1 {
-        font-size: 23px;
-    }
-
-    .entry {
-        padding: 16px 13px;
+    .main {
+        margin-top: 25px;
     }
 }
 </style>
@@ -182,90 +152,82 @@ h1 {
 
 <body>
 
-<div class="top-bar">
-    <div class="logo">
+<div class="header">
+    <div class="google">
         <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
     </div>
-    <div class="profile">F</div>
+    <div class="avatar">F</div>
 </div>
 
-<div class="container">
+<div class="main">
 
     <h1>Search history</h1>
+    <div class="description">Your recent searches and activity</div>
 
-    <div class="subtitle">
-        Your recent searches and activity
-    </div>
+    <div class="search">⌕ &nbsp; Search your activity</div>
 
-    <div class="search-bar">
-        <span>⌕</span>
-        <input type="text" placeholder="Search your activity" disabled>
-    </div>
+    <h2>Recent activity</h2>
 
-    <div class="section-title">Recent activity</div>
+    <div class="date">November 14, 2026</div>
 
-    <!-- DAY 1 -->
-    <div class="day">November 14, 2026</div>
+    <div class="history">
 
-    <div class="history-card">
-
-        <div class="entry">
-            <div class="search-icon">⌕</div>
-            <div class="entry-content">
+        <div class="item">
+            <div class="icon">⌕</div>
+            <div class="details">
                 <div class="query">Malathion poisoning symptoms</div>
                 <div class="time">11:42 PM</div>
             </div>
-            <div class="dots">⋮</div>
+            <div class="more">⋮</div>
         </div>
 
-        <div class="entry">
-            <div class="search-icon">⌕</div>
-            <div class="entry-content">
+        <div class="item">
+            <div class="icon">⌕</div>
+            <div class="details">
                 <div class="query">Organophosphate poisoning forensic investigation</div>
                 <div class="time">11:49 PM</div>
             </div>
-            <div class="dots">⋮</div>
+            <div class="more">⋮</div>
         </div>
 
     </div>
 
-    <!-- DAY 2 -->
-    <div class="day">November 15, 2026</div>
+    <div class="date">November 15, 2026</div>
 
-    <div class="history-card">
+    <div class="history">
 
-        <div class="entry">
-            <div class="search-icon">⌕</div>
-            <div class="entry-content">
+        <div class="item">
+            <div class="icon">⌕</div>
+            <div class="details">
                 <div class="query">Malathion safety data sheet</div>
                 <div class="time">7:18 AM</div>
             </div>
-            <div class="dots">⋮</div>
+            <div class="more">⋮</div>
         </div>
 
-        <div class="entry">
-            <div class="search-icon">⌕</div>
-            <div class="entry-content">
+        <div class="item">
+            <div class="icon">⌕</div>
+            <div class="details">
                 <div class="query">What to do after accidental pesticide exposure</div>
                 <div class="time">7:24 AM</div>
             </div>
-            <div class="dots">⋮</div>
+            <div class="more">⋮</div>
         </div>
 
-        <div class="entry">
-            <div class="search-icon">⌕</div>
-            <div class="entry-content">
+        <div class="item">
+            <div class="icon">⌕</div>
+            <div class="details">
                 <div class="query">Can pesticide residue contaminate kitchen surfaces?</div>
                 <div class="time">7:31 AM</div>
             </div>
-            <div class="dots">⋮</div>
+            <div class="more">⋮</div>
         </div>
 
     </div>
 
     <div class="footer">
-        This is a simulated browser activity record.<br>
-        Search activity is displayed for investigative purposes.
+        Search activity<br>
+        Manage your Google Account
     </div>
 
 </div>
